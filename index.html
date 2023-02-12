@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Article preview component</title>
+  <!----------------FONTS------------------>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="StyleSheet" href= "styles.css"  type= "text/css">
+
+</head>
+<body>
+
+  <main class="card-container">
+
+    <img class="card-container__drawerImg" src="./images/drawers.jpg" alt="green drawer with white portraits and jar with wheat">
+    <div class="card-container__noPic">
+
+      <section class="card-container__text">
+        <p class="card-container__text__bold-paragraph">
+          Shift the overall look and feel by adding these wonderful 
+          touches to furniture in your home
+        </p>
+        <p class="card-container__text__normal-paragraph">
+          Ever been in a room and felt like something was missing? Perhaps 
+          it felt slightly bare and uninviting. I’ve got some simple tips 
+          to help you make any room feel complete.
+        </p>
+      </section>
+        
+      <!-----------------WHITE CONTAINER---------------------->
+      <section class="card-container__person" id="white-link">
+        <img class="card-container__person__avatar" alt="person's picture" src="./images/avatar-michelle.jpg">
+       
+        <div class="card-container__person__info">
+          <h2 class="card-container__person__name">Michelle Appleton</h2>
+          <p class="card-container__person__date">28 Jun 2020</p>
+        </div>
+
+        <div class="card-container__person__links__arrow-icon-mobile" id="white-arrow">
+          <img class="card-container__person__arrow-icon-mobile" src="./images/icon-share.svg" alt="arrow share">
+        </div>
+      </section>
+
+    </div>
+    
+
+
+    <!------------BLACK CONTAINER------------>
+    <section class="card-container__person__links"  id="black-link">
+      
+      <p class="card-container__person__links__share">Share</p>
+      
+      <div class="card-container__person__links_imgs">
+        
+        <a class="facebook" href="https://www.facebook.com/" target="_blank"><img src="./images/icon-facebook.svg"></a>
+        <a class="twitter" href="https://twitter.com/" target="_blank"><img  src="./images/icon-twitter.svg"></a>
+        <a class="pinterest" href="https://ar.pinterest.com/login/" target="_blank"><img src="./images/icon-pinterest.svg"></a>
+          
+      </div>
+      
+      <div class="card-container__person__links__arrow-icon" id="black-arrow">
+        <img class="card-container__person__links__arrow-icon__img" src="./images/icon-share.svg" alt="arrow share">
+  
+       </div>
+       
+    </section>
+    
+    
+
+  </main>
+ 
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/LilithNixx">LilithNixx</a>.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

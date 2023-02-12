@@ -1,0 +1,332 @@
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    background-color: var(--Light-Grayish-Blue);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 100vh;
+}
+
+.card-container {
+    width: 375px;
+    height: 567px;
+
+    background-color: white;
+    border-radius: 25px;
+
+    margin: 50px;
+}
+
+.card-container__drawerImg {
+    width: 375px;
+    height: 200px;
+    
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.card-container__text, .card-container__person, .card-container__person__links {
+    padding: 31px;
+}
+
+.card-container__text__bold-paragraph {
+    font-weight: 700;
+    padding-bottom: 10px;
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.card-container__text__normal-paragraph {
+    font-weight: 400;
+    padding-bottom: 10px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--Desaturated-Dark-Blue);
+    letter-spacing: 1px;
+}
+
+.card-container__person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 100px;
+
+    margin-bottom: 18px;
+    margin-top: -26px;
+}
+
+.card-container__person__avatar {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+}
+
+.card-container__person__name {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--Very-Dark-Grayish-Blue);
+    padding: 6px 0;
+}
+
+.card-container__person__arrow-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.card-container__person__date {
+    font: 1.1em;
+    color: var(--Desaturated-Dark-Blue);
+}
+
+.card-container__person__info {
+    position: relative;
+    right: 30px;
+}
+
+/*--------------BLACK CONTAINER---------------*/
+.card-container__person__links {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    bottom: 100px;
+    
+    width: 375px;
+    height: 100px;
+
+    display: none;
+}
+
+.card-container__person__links__share {
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: var(--Grayish-Blue);
+    font-size: 14px;
+}
+
+.card-container__person__links_imgs {
+    display: flex;
+    justify-content:first baseline;
+    gap: 5px;
+    align-items: center;  
+   
+    position: relative;
+    right: 20px;
+    
+    width: 130px;
+    height: 40px;
+}
+
+.facebook, .twitter, .pinterest {
+    width: 35px;
+    height: 35px;
+   
+    text-decoration: none;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-container__person__links__arrow-icon, .card-container__person__links__arrow-icon-mobile {
+    background-color: var(--Desaturated-Dark-Blue);
+    border-radius: 50%;
+    
+    width: 40px;
+    height: 40px;
+    
+    position: relative;
+}
+
+
+.card-container__person__links__arrow-icon-mobile {
+    background-color: var(--Light-Grayish-Blue);
+}
+
+.card-container__person__links__arrow-icon__img, .card-container__person__arrow-icon-mobile {
+    /*https://codepen.io/sosuke/pen/Pjoqqp*/
+    filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(0%) hue-rotate(12deg) brightness(108%) contrast(103%);
+
+    position: absolute;
+    top: 35%;
+    right: 30%;
+    
+}
+
+.card-container__person__arrow-icon-mobile {
+    filter: brightness(0) saturate(100%) invert(31%) sepia(18%) saturate(687%) hue-rotate(178deg) brightness(95%) contrast(88%);
+}
+
+.card-container__person__links__arrow-icon-mobile:hover {
+    background-color: var(--Very-Dark-Grayish-Blue);
+}
+
+.card-container__person__arrow-icon-mobile:hover {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(0%) hue-rotate(12deg) brightness(108%) contrast(103%);
+}
+
+
+
+/*-------------FOOTER----------------*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+/*-----------DESKTOP VIEW------------*/
+@media(min-width: 700px){
+    .card-container {
+        width:731px;
+        height: 284px;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card-container__drawerImg {
+        width: 284px;
+        height: 284px;
+
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 25px;
+    }
+
+    .card-container__text {
+        display: flex;
+        flex-direction: column;
+        
+        height: 192px;
+    }
+
+    .card-container__person {
+        height: 91px;
+        padding-top: 10px;
+        margin-top: 1px;
+        margin-bottom: 0;
+
+    }
+
+    .card-container__noPic {
+        height: 285px;
+        width: 446px;
+    }
+
+    .card-container__text {
+        width: 445px;
+        height: 198px;
+    }
+
+    .card-container__text__normal-paragraph {
+        font-size: 0.9em;
+        margin-bottom: 0;
+
+        width: 394px;
+    }
+
+    .card-container__text__bold-paragraph {
+        font-size: 1.6em;
+        line-height: 1.2;
+        color: var(--Desaturated-Dark-Blue);
+
+        width: 394px;
+    }
+
+    .card-container__person__links {
+        border-radius: 15px;
+
+        justify-content: center;
+        position: relative;
+        bottom: -40%;
+        left: -25%;
+
+        width: 19em;
+        height: 60px;
+        padding: 2em 5em;
+        z-index: 1;
+    }
+
+    .card-container__person__links::after  {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        border-style: solid;
+        margin-left: -10px;
+        border-width: 10px;
+        border-color: var(--Very-Dark-Grayish-Blue) transparent transparent;
+
+    }
+    .card-container__person__links__share {
+        font-size: 12px;
+
+        position: relative;
+        right: 10px;
+    }
+
+    .card-container__person__links_imgs {
+        width: 90px;
+
+        justify-content: space-between;
+        right: -4px;
+        gap:13px;
+    }
+
+    .facebook, .twitter, .pinterest {
+        width: 20px;
+        height: 20px;
+
+    }
+ 
+    .card-container__person__links__arrow-icon {
+        position: absolute;
+        right: 39%;
+        bottom: -133%;
+       
+        width: 40px;
+        height: 40px;
+        z-index: 1;
+        background-color: var(--Very-Dark-Grayish-Blue);
+    }
+
+    .card-container__person__links__arrow-icon:hover {
+        background-color: var(--Light-Grayish-Blue);
+    }
+
+    .card-container__person__links__arrow-icon__img:hover {
+        filter: brightness(0) saturate(100%) invert(31%) sepia(18%) saturate(687%) hue-rotate(178deg) brightness(95%) contrast(88%);
+    }
+    
+    
+}
